@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Screen_resolution
@@ -13,6 +8,11 @@ namespace Screen_resolution
         public Form1()
         {
             InitializeComponent();
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            textBox1.Text = SystemInformation.PrimaryMonitorSize.Width.ToString();
+            textBox2.Text = SystemInformation.PrimaryMonitorSize.Height.ToString();
         }
     }
 }
